@@ -22,7 +22,6 @@ To run this project, you need **MATLAB** (R2021a or newer recommended) along wit
 
 ## 📋 Project Structure
 
-```text
 ├── activity_data_preprocessing.m   # Data cleaning, noise filtering, and normalization
 ├── autoencoder.m                   # Network architecture definition
 ├── train_lstm.m                    # Script to train the autoencoder on normal data

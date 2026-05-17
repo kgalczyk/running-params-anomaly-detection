@@ -1,9 +1,9 @@
 ```markdown
 # Autoencoder for Running Params Anomaly Detection (MATLAB)
 
-This project implements an unsupervised anomaly detection system for running parameters (such as heart rate, cadence,) using an autoencoder based on LSTM (long short-term memory gate) network built entirely in MATLAB.
+This project implements an unsupervised anomaly detection system for running parameters (such as heart rate and cadence) using an autoencoder based on an LSTM (Long Short-Term Memory) network built entirely in MATLAB.
 
-The system learns the baseline pattern of a runner's normal training parameters and automatically flags deviations that could indicate equipment malfunctions (incorrect heart rate monitor or GPS measurements) or signal injury risk (for example: overload may cause higher heart rate).
+The system learns the baseline pattern of a runner's normal training parameters and automatically flags deviations that could indicate equipment malfunctions (such as incorrect heart rate monitor or GPS measurements) or signal injury risk (for example, where overload may cause an abnormally higher heart rate).
 
 ## 🚀 Overview
 
@@ -11,8 +11,8 @@ An Autoencoder is a type of neural network trained to reconstruct its input data
 
 ### How it Works:
 1. **Compression & Reconstruction:** The network compresses the multi-dimensional running parameters into a lower-dimensional latent space and then attempts to reconstruct the original signal.
-2. **Reconstruction Error:** For standard activities the reconstruction error remains minimal.
-3. **Anomaly Detection:** When abnormal running parameters occur (e.g., relatively low or high heart rate, s), the Autoencoder fails to reconstruct the data accurately. A spike in the **Reconstruction Error** exceeding a predefined threshold signals an anomaly.
+2. **Reconstruction Error:** For standard activities, the reconstruction error remains minimal.
+3. **Anomaly Detection:** When abnormal running parameters occur (e.g., an unexpectedly low or high heart rate), the Autoencoder fails to reconstruct the data accurately. A spike in the **Reconstruction Error** exceeding a predefined threshold signals an anomaly.
 
 ## 🛠️ Requirements & Toolboxes
 
@@ -22,8 +22,9 @@ To run this project, you need **MATLAB** (R2021a or newer recommended) along wit
 
 ## 📋 Project Structure
 
+```text
 ├── activity_data_preprocessing.m   # Data cleaning, noise filtering, and normalization
-├── autoencoder.m                   # Network architecture definition
+├── autoencoder.m                  # Network architecture definition
 ├── train_lstm.m                    # Script to train the autoencoder on normal data
 ├── analyze_full_training.m         # Anomaly detection logic and visualization
 └── README.md                       # Project documentation

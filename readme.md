@@ -1,4 +1,3 @@
-```markdown
 # Autoencoder for Running Params Anomaly Detection (MATLAB)
 
 This project implements an unsupervised anomaly detection system for running parameters (such as heart rate and cadence) using an autoencoder based on an LSTM (Long Short-Term Memory) network built entirely in MATLAB.
@@ -22,7 +21,6 @@ To run this project, you need **MATLAB** (R2021a or newer recommended) along wit
 
 ## 📋 Project Structure
 
-```text
 ├── activity_data_preprocessing.m   # Data cleaning, noise filtering, and normalization
 ├── autoencoder.m                  # Network architecture definition
 ├── train_lstm.m                    # Script to train the autoencoder on normal data
